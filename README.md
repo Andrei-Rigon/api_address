@@ -1,59 +1,132 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Endereços - Laravel</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
 
-## About Laravel
+        h1, h2 {
+            color: #2c3e50;
+        }
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+        h1 {
+            margin-bottom: 10px;
+        }
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+        p {
+            line-height: 1.6;
+        }
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+        ul {
+            margin-left: 20px;
+        }
 
-## Learning Laravel
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+        .badge {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
 
-## Laravel Sponsors
+    <div class="container">
+        <h1>CRUD de Endereços</h1>
+        <span class="badge">Laravel</span>
+        <span class="badge">API REST</span>
+        <span class="badge">BrasilAPI</span>
+        <span class="badge">Repository Pattern</span>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+        <p>
+            Este projeto é uma API REST desenvolvida em <strong>Laravel</strong> para gerenciamento
+            de endereços de entrega, com integração à <strong>BrasilAPI</strong> para busca de dados
+            a partir do CEP.
+        </p>
 
-### Premium Partners
+        <h2>🚀 Funcionalidades</h2>
+        <ul>
+            <li>Cadastro de endereços</li>
+            <li>Listagem de endereços</li>
+            <li>Consulta de endereço por ID</li>
+            <li>Atualização de endereço</li>
+            <li>Remoção de endereço</li>
+            <li>Busca automática de dados via CEP</li>
+        </ul>
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+        <h2>🛠 Tecnologias Utilizadas</h2>
+        <ul>
+            <li>PHP 8+</li>
+            <li>Laravel 12</li>
+            <li>Repository Pattern</li>
+            <li>API RESTful</li>
+            <li>BrasilAPI (CEP)</li>
+            <li>MySQL / MariaDB</li>
+        </ul>
 
-## Contributing
+        <h2>📌 Endpoints Principais</h2>
+        <ul>
+            <li><code>GET /api/addresses</code> – Listar endereços</li>
+            <li><code>POST /api/addresses</code> – Criar endereço</li>
+            <li><code>GET /api/addresses/{id}</code> – Buscar endereço</li>
+            <li><code>PUT /api/addresses/{id}</code> – Atualizar endereço</li>
+            <li><code>DELETE /api/addresses/{id}</code> – Remover endereço</li>
+            <li><code>GET /api/buscar-cep/{cep}</code> – Buscar dados do CEP</li>
+        </ul>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+        <h2>📂 Arquitetura</h2>
+        <p>
+            O projeto utiliza o <strong>Repository Pattern</strong> para separar as responsabilidades
+            de acesso a dados da lógica de negócio, facilitando manutenção, testes e escalabilidade.
+        </p>
 
-## Code of Conduct
+        <h2>▶️ Como Executar</h2>
+        <ul>
+            <li>Clone o repositório</li>
+            <li>Execute <code>composer install</code></li>
+            <li>Configure o arquivo <code>.env</code></li>
+            <li>Execute as migrations</li>
+            <li>Inicie o servidor com <code>php artisan serve</code></li>
+        </ul>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+        <footer>
+            <p>Desenvolvido por Andrei 🚀</p>
+        </footer>
+    </div>
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</body>
+</html>
